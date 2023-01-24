@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    img{
+        height: 200px;
+        width: 200px;
+    }
+    #container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    #txt{
+        color: green;
+        font-size: 30px;
+    }
+    button{
+        margin: 2rem;
+    }
+</style>
+</head>
+<div id="container">
+<body id="body">
+    <p id="txt">Geekster</p>
+    <p >Click on the button to add image element</p>
+    <p id="txt2"></p>
+<button onClick="fun()">click me</button>
+</div>
+<!-- ---------------------------------------js------------------------------------------------------------ -->
+    <script>
+        function fun(){
+            console.log("clicked");
+      var img=  document.createElement('img');
+      img.src ='./geekster.webp';
+    document.getElementById('container').appendChild(img);
+    var txt2 = document.getElementById('txt2').innerHTML="Image Element Added.."
+
+        }
+    </script>
+</body>
+</html>
